@@ -70,7 +70,7 @@
                     
                         <a href="{{ url('/') }}">Home</a>
                     
-                        <a href="{{ url('/') }}">Login</a>
+                        <a href="{{ url('/Login') }}">Login</a>
                         <a href="{{ url('/') }}">Register</a>
                     
                 </div>
@@ -78,7 +78,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    -Volunteer Page
+                    Volunteer Page
                 </div>
             </div>
         </div>
