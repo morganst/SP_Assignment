@@ -13,7 +13,28 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in!</br>
+                    <p>You are logged in!</p></br>
+                    @if(count($posts) > 0)
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Title</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            @foreach($posts as $post)
+                                <tr>
+                                    <td>{{$post->title}}</td>
+                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a></td>
+                                    <td>{!!Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'post','class'=>'pull-right'])!!}
+                                            {{Form::hidden('_method','DELETE')}}
+                                            {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                        {!!Form::close()!!}</td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    @else
+                        <p>You have no posts</p>
+                    @endif
                     <a href="/posts" class="btn btn-primary">Posts</a>
                 </div>
             </div>
