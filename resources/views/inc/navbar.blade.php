@@ -20,7 +20,10 @@
             </li>
             <li class="nav-item">
                     <a class="nav-link" href="/dashboard">Dashboard</a>
-            </li>          
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" href="/manage">Manage</a>
+            </li>         
             </ul>
         </div>
                   <!-- Right Side Of Navbar -->

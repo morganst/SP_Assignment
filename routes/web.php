@@ -34,8 +34,11 @@ Route::get('/about', function () {
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
+Route::get('/manage', 'PagesController@manage');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::get('/volunteer', 'ManageVController@index');
