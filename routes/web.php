@@ -11,32 +11,12 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
-Route::get('/Login', function () {
-    return view('Login.Login');
-});
-
-Route::get('/success', function () {
-    return view('Login.success');
-});
-
-Route::get('/about', function () {
-    return view('pages.about');
-});
-
-/*Route::get('/users/{id}/{name}', function ($id, $name) {
-    return 'This is user ' .$name;
-});*/
-
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::get('/manage', 'PagesController@manage');
 
-Route::resource('posts', 'PostsController');
+Route::resource('volunteers', 'VolunteerController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
