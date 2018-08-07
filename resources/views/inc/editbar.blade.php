@@ -57,10 +57,7 @@ li.dropdown {
          <a class="nav-link" href="/volunteers">View Opportunity Matches</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/volunteers/create">Edit Volunteer</a>
-        </li>
-        <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Add Volunteer</a>
+                <a class="nav-link" href="/volunteers/create">Add Volunteer</a>
         </li>         
         </ul>
         <form class="form-inline">

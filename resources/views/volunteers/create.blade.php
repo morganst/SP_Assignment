@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create</h1>
+    <h1>Add Volunteer</h1>
     {!! Form::open(['action'=>'VolunteerController@store','method'=>'POST']) !!}
         <div class="form-group">
             {{Form::label('FName','First Name')}}
