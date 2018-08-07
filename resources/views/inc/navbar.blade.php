@@ -13,15 +13,6 @@
               <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-=======
-             <a class="nav-link" href="/volunteers">volunteers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/volunteers/create">Create volunteers</a>
-            </li>
-            <li class="nav-item">
->>>>>>> d4bd915baaadb57d16fc1d6678e4b70888938365
                     <a class="nav-link" href="/dashboard">Dashboard</a>
             </li>  
             <li class="nav-item">
