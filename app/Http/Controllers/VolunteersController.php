@@ -14,7 +14,7 @@ class VolunteersController extends Controller
      */
     public function index()
     {
-        $volunteers = Volunteer::all();
+        $volunteers = Volunteer::orderBy('created_at', 'asc')->paginate(10);
         return view('volunteers.index')->with('volunteers', $volunteers);
     }
 
@@ -25,7 +25,7 @@ class VolunteersController extends Controller
      */
     public function create()
     {
-        //
+        return view('volunteers.create');
     }
 
     /**
