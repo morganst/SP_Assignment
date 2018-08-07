@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Volunteer;
 
 class VolunteersController extends Controller
 {
@@ -13,7 +14,8 @@ class VolunteersController extends Controller
      */
     public function index()
     {
-        //
+        $volunteers = Volunteer::all();
+        return view('volunteers.index')->with('volunteers', $volunteers);
     }
 
     /**
@@ -45,7 +47,8 @@ class VolunteersController extends Controller
      */
     public function show($id)
     {
-        //
+        $vols = Volunteer::find($id);
+        return view('Volunteers.show')->with('vols', $vols);
     }
 
     /**
