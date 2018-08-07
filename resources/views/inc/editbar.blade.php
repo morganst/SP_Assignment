@@ -52,9 +52,18 @@ li.dropdown {
               <a href="#">Inactive</a>
               <a href="#">All</a>
             </div>
+<<<<<<< HEAD
         </li>
         <li class="nav-item">
          <a class="nav-link" href="/volunteers">View Opportunity Matches</a>
+=======
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="/volunteers">View Opportunity Matches</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/volunteers/create">Edit Volunteer</a>
+>>>>>>> d4bd915baaadb57d16fc1d6678e4b70888938365
         </li>
         <li class="nav-item">
                 <a class="nav-link" href="/volunteers/create">Add Volunteer</a>

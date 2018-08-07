@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
     <h1>Volunteer</h1>
     <div>
         <ul style="list-style-type:none">
@@ -8,6 +9,10 @@
             <li>Tea</li>
             <li>Milk</li>
           </ul>            
+=======
+    <h1>{{$volunteer->title}}</h1>
+    <div>
+>>>>>>> d4bd915baaadb57d16fc1d6678e4b70888938365
         {!!$volunteer->FName!!}
         {!!$volunteer->LName!!}
     </div>
