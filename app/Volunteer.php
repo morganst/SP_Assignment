@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Volunteer extends Model
 {
     //Table name
-    protected $table = 'posts';
+    protected $table = 'volunteers';
     //Priamary Key
     public $primaryKey = 'id';
     //Time Stamps
