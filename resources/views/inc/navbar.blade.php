@@ -5,6 +5,10 @@
       <a class="p-2 text-dark" href="/about">About</a>
       <a class="p-2 text-dark" href="/volunteers/">Volunteer Index</a>
     </nav>
-    <a class="btn btn-outline-primary" href="#">Sign up</a>&nbsp;
-    <a class="btn btn-outline-secondary" href="#">Login</a>
+    <div class="text-right">
+      <div class="btn-group">
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+        <a class="btn btn-outline-secondary" href="#">Login</a>
+      </div>
+    </div>
 </div>
