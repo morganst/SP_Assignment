@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
+Route::get('/search', 'SearchController@search');

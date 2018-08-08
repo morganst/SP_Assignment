@@ -58,11 +58,15 @@ li.dropdown {
         </li>
         <li class="nav-item">
                 <a class="nav-link" href="/volunteers/create">Add Volunteer</a>
-        </li>         
+        </li>       
         </ul>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-sm btn-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+        <form class="form-inline my-2 my-md-0 nav" role="search" method="get" action="{{url("/search")}}">
+            <div class="input-group">
+                <input type="text" class="form-control mr-sm-2" placeholder="Search" name="title">
+                <div class="input-group-btn">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
+                </div>
+            </div>
+        </form>  
     </div>
 </nav>
