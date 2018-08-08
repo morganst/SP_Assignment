@@ -36,7 +36,21 @@ class VolunteersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'userName' => 'required',
+            'password' => 'required'
+        ]);
+
+        $volunteer = new Volunteer;
+        $volunteer->firstName = $request->input('firstName');
+        $volunteer->lastName = $request->input('lastName');
+        $volunteer->userName = $request->input('userName');
+        $volunteer->password = $request->input('password');
+        $volunteer->save();
+        
+        return redirect('/volunteers')->with('success', 'Volunteer Created!');
     }
 
     /**

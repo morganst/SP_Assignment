@@ -22,6 +22,9 @@
                     {{Form::text('password', '', ['class' => 'form-control', 'placeholder' => 'Password'])}}
                 </div>
             </div>
+            <div style="padding-top: 10px">
+                {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+            </div>
         </form>
     {!! Form::close() !!}
 @endsection
