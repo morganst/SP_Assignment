@@ -3,28 +3,48 @@
 @section('content')
     <h1>Volunteer</h1>
     <div>
-        <ul style="list-style-type:none">
-            <li>{!!$volunteer->FName!!} {!!$volunteer->LName!!}</li>
-            <li>{!!$volunteer->Username!!}</li>
-            <li>{!!$volunteer->Password!!}</li>
-            <li>{!!$volunteer->WorkCenter!!}</li>
-            <li>{!!$volunteer->Skills!!}</li>
-            <li>{!!$volunteer->Avail!!}</li>
-            <li>{!!$volunteer->Address!!}</li>
-            <li>{!!$volunteer->HomeNum!!}</li>
-            <li>{!!$volunteer->WorkNum!!}</li>
-            <li>{!!$volunteer->CellNum!!}</li>
-            <li>{!!$volunteer->Email!!}</li>
-            <li>{!!$volunteer->EduBack!!}</li>
-            <li>{!!$volunteer->Licenses!!}</li>
-            <li>{!!$volunteer->ERName!!}</li>
-            <li>{!!$volunteer->ERPhoneNum!!}</li>
-            <li>{!!$volunteer->EREmail!!}</li>
-            <li>{!!$volunteer->ERAddress!!}</li>
-            <li>{!!$volunteer->LicenseCP!!}</li>
-            <li>{!!$volunteer->SSNCP!!}</li>
-            <li>{!!$volunteer->AppStatus!!}</li>
-          </ul>            
+        <dl>
+            <dt>Volunteer Name</dt>
+            <dd>{!!$volunteer->FName!!} {!!$volunteer->LName!!}</dd>
+            <dt>Username</dt>
+            <dd>{!!$volunteer->Username!!}</dd>
+            <dt>Password</dt>
+            <dd>{!!$volunteer->Password!!}</dd>
+            <dt>Work Center</dt>
+            <dd>{!!$volunteer->WorkCenter!!}</dd>
+            <dt>Skills/Interests</dt>
+            <dd>{!!$volunteer->Skills!!}</dd>
+            <dt>Availability times</dt>
+            <dd>{!!$volunteer->Avail!!}</dd>
+            <dt>Address</dt>
+            <dd>{!!$volunteer->Address!!}</dd>
+            <dt>Home Number</dt>
+            <dd>{!!$volunteer->HomeNum!!}</dd>
+            <dt>Work Number</dt>
+            <dd>{!!$volunteer->WorkNum!!}</dd>
+            <dt>Cell Number</dt>
+            <dd>{!!$volunteer->CellNum!!}</dd>
+            <dt>Email Address</dt>
+            <dd>{!!$volunteer->Email!!}</dd>
+            <dt>Education Background</dt>
+            <dd>{!!$volunteer->EduBack!!}</dd>
+            <dt>Current Licenses</dt>
+            <dd>{!!$volunteer->licenses!!}</dd>
+            <dt>Emergency Contact Name</dt>
+            <dd>{!!$volunteer->ERName!!}</dd>
+            <dt>Emergency Contact Phone Number</dt>
+            <dd>{!!$volunteer->ERPhoneNum!!}</dd>
+            <dt>Emergency Contact Email</dt>
+            <dd>{!!$volunteer->EREmail!!}</dd>
+            <dt>Emergency Contact Address</dt>
+            <dd>{!!$volunteer->ERAddress!!}</dd>
+            <dt>Drivers License on File?</dt>
+            <dd>{!!$volunteer->LicenseCP!!}</dd>
+            <dt>Social Security Number on File?</dt>
+            <dd>{!!$volunteer->SSNCP!!}</dd>
+            <dt>Approval Status</dt>
+            <dd>{!!$volunteer->AppStatus!!}</dd>
+          </dl>            
     </div>
     <a href="/volunteers/{{$volunteer->id}}/edit" class="btn btn-default">Edit</a>
 

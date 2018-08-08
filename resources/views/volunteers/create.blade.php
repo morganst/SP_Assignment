@@ -77,15 +77,15 @@
         </div>
         <div class="form-group">
                 {{Form::label('LicenseCP','Is a copy of volunteer’s drivers license on file?')}}
-                {{Form::select('LicenseCP',['Yes','No'],null,['placeholder' => ''])}}
+                {{Form::select('LicenseCP',['Yes'=>'Yes','No'=>'No'],null,['placeholder' => ''])}}
         </div>
         <div class="form-group">
                 {{Form::label('SSNCP','Is a copy of volunteer’s social security card on file?')}}
-                {{Form::select('SSNCP',['Yes','No'],null,['placeholder' => ''])}}
+                {{Form::select('SSNCP',['Yes'=>'Yes','No'=>'No'],null,['placeholder' => ''])}}
         </div>
         <div class="form-group">
                 {{Form::label('AppStatus','Volunteer’s Approval Status')}}
-                {{Form::select('AppStatus',['Approved/Pending Approval','Approved','Pending Approval','Disapproved','Inactive'],null,['placeholder' => 'Select Status'])}}
+                {{Form::select('AppStatus',['Approved/Pending Approval'=>'Approved/Pending Approval','Approved'=>'Approved','Pending Approval'=>'Pending Approval','Disapproved'=>'Disapproved','Inactive'=>'Inactive'],null,['placeholder' => 'Select Status'])}}
         </div>
         {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}   
