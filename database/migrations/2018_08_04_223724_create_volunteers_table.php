@@ -17,7 +17,7 @@ class CreateVolunteersTable extends Migration
             $table->increments('id');
             $table->string('firstName');
             $table->string('lastName');
-            $table->string('userName');
+            $table->string('userName')->unique();
             $table->string('password');
             $table->timestamps();
         });

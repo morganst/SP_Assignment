@@ -12,5 +12,8 @@
 *   composer install
 *   copy .env.example .env
 *   php artisan key:generate
+*   in .env APP_NAME="Volunteer Page" 
+*   db username = root
+*   db pass = (null) 
 *   npm install
-*   npm run dev*
+*   npm run dev
