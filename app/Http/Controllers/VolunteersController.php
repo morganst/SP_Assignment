@@ -14,7 +14,7 @@ class VolunteersController extends Controller
      */
     public function index()
     {
-        $volunteers = Volunteer::orderBy('created_at', 'asc')->paginate(10);
+        $volunteers = Volunteer::orderBy('created_at', 'des')->paginate(10);
         return view('volunteers.index')->with('volunteers', $volunteers);
     }
 
@@ -61,8 +61,8 @@ class VolunteersController extends Controller
      */
     public function show($id)
     {
-        $vols = Volunteer::find($id);
-        return view('Volunteers.show')->with('vols', $vols);
+        $vol = Volunteer::find($id);
+        return view('volunteers.show')->with('vol', $vol);
     }
 
     /**
@@ -73,7 +73,8 @@ class VolunteersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vol = Volunteer::find($id);
+        return view('volunteers.edit')->with('vol', $vol);
     }
 
     /**
@@ -85,7 +86,21 @@ class VolunteersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'userName' => 'required',
+            'password' => 'required'
+        ]);
+
+        $volunteer = Volunteer::find($id);
+        $volunteer->firstName = $request->input('firstName');
+        $volunteer->lastName = $request->input('lastName');
+        $volunteer->userName = $request->input('userName');
+        $volunteer->password = $request->input('password');
+        $volunteer->save();
+        
+        return redirect('/volunteers')->with('success', 'Volunteer Updated!');
     }
 
     /**
@@ -96,6 +111,9 @@ class VolunteersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vol = Volunteer::find($id);
+        $vol->delete();
+
+        return redirect('/volunteers')->with('success', 'Volunteer Deleted!');
     }
 }
