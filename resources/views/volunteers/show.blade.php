@@ -13,6 +13,7 @@
             {!!Form::close()!!}
         </div>
     @endif
+    
         <hr>
         <div>username: {{$vol->userName}}</div>
         <div>username: {{$vol->userName}}</div>

@@ -29,8 +29,8 @@
                                 {{Form::submit('Delete', ['class' => 'btn btn-sm btn-danger'])}}
                             {!!Form::close()!!}
                         @else
-                            <a class="btn btn-primary disabled" role="button">Edit</a>
-                            <a class="btn btn-danger disabled" role="button">Delete</a>
+                            <a class="btn btn-primary disabled" style="color: white" role="button" aria-disabled="true">Edit</a>
+                            <a class="btn btn-danger disabled" style="color: white" role="button" aria-disabled="true">Delete</a>
                         @endif
 
                     </div>

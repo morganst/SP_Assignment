@@ -84,7 +84,7 @@ class VolunteersController extends Controller
         $vol = Volunteer::find($id);
 
         if(auth()->user()->id !== $vol->user_id) {
-            return redirect('volunteers')->with('vol', $vol);
+            return redirect('volunteers')->with('error', 'Unauthorized page');
         }
 
         return view('volunteers.edit')->with('vol', $vol);
@@ -125,6 +125,11 @@ class VolunteersController extends Controller
     public function destroy($id)
     {
         $vol = Volunteer::find($id);
+
+        if(auth()->user()->id !== $vol->user_id) {
+            return redirect('volunteers')->with('error', 'Unauthorized page');
+        }
+
         $vol->delete();
 
         return redirect('/volunteers')->with('success', 'Volunteer Deleted!');
