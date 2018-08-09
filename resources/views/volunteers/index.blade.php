@@ -21,11 +21,18 @@
                 <div class"col-3 col-lg-3">
                     <div class="btn-group">
                         <a class="btn btn-secondary" href="/volunteers/{{$volunteer->id}}" role="button">View</a>
-                        <a class="btn btn-primary active" href="/volunteers/{{$volunteer->id}}/edit" role="button">Edit</a>
-                        {!!Form::open(['action' => ['VolunteersController@destroy', $volunteer->id], 'method' => 'POST', 'class' => 'btn btn-sm btn-danger'])!!}
-                            {{Form::hidden('_method', 'DELETE')}}
-                            {{Form::submit('Delete', ['class' => 'btn btn-sm btn-danger'])}}
-                        {!!Form::close()!!}
+                        
+                        @if(Auth::user()->id == $volunteer->user_id)
+                            <a class="btn btn-primary active" href="/volunteers/{{$volunteer->id}}/edit" role="button">Edit</a>
+                            {!!Form::open(['action' => ['VolunteersController@destroy', $volunteer->id], 'method' => 'POST', 'class' => 'btn btn-sm btn-danger'])!!}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Delete', ['class' => 'btn btn-sm btn-danger'])}}
+                            {!!Form::close()!!}
+                        @else
+                            <a class="btn btn-primary disabled" role="button">Edit</a>
+                            <a class="btn btn-danger disabled" role="button">Delete</a>
+                        @endif
+
                     </div>
                 </div>
             </div>

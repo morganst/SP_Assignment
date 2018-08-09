@@ -7,6 +7,13 @@ use App\Volunteer;
 
 class VolunteersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        //$this->middleware('auth', ['except' => ['index','show']])
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -75,6 +82,11 @@ class VolunteersController extends Controller
     public function edit($id)
     {
         $vol = Volunteer::find($id);
+
+        if(auth()->user()->id !== $vol->user_id) {
+            return redirect('volunteers')->with('vol', $vol);
+        }
+
         return view('volunteers.edit')->with('vol', $vol);
     }
 
