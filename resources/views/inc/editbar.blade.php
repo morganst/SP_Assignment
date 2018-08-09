@@ -45,12 +45,12 @@ li.dropdown {
         <li class="dropdown">
             <a href="javascript:void(0)" class="nav-link">Volunteer Filter</a>
             <div class="dropdown-content">
-              <a href="#">Approved/Pending </a>
-              <a href="#">Approved</a>
-              <a href="#">Pending Approval </a>
-              <a href="#">Disapproved</a>
-              <a href="#">Inactive</a>
-              <a href="#">All</a>
+              <a href="/filter?title=Approved/Pending Approval">Approved/Pending </a>
+              <a href="/filter?title=Approved">Approved</a>
+              <a href="/filter?title=Pending Approval">Pending Approval</a>
+              <a href="/filter?title=Disapproved">Disapproved</a>
+              <a href="/filter?title=Inactive">Inactive</a>
+              <a href="/volunteers">All</a>
             </div>
         </li>
         <li class="nav-item">
