@@ -85,7 +85,7 @@
         </div>
         <div class="form-group">
                 {{Form::label('AppStatus','Volunteer’s Approval Status')}}
-                {{Form::select('AppStatus',['Approved/Pending Approval'=>'Approved/Pending Approval','Approved'=>'Approved','Pending Approval'=>'Pending Approval','Disapproved'=>'Disapproved','Inactive'=>'Inactive'],null,['placeholder' => 'Select Status'])}}
+                {{Form::select('AppStatus',['Approved'=>'Approved','Pending Approval'=>'Pending Approval','Disapproved'=>'Disapproved','Inactive'=>'Inactive'],null,['placeholder' => 'Select Status'])}}
         </div>
         {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}   

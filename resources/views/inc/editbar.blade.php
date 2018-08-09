@@ -45,7 +45,7 @@ li.dropdown {
         <li class="dropdown">
             <a href="javascript:void(0)" class="nav-link">Volunteer Filter</a>
             <div class="dropdown-content">
-              <a href="/filter?title=Approved/Pending Approval">Approved/Pending </a>
+              <a href="/multiFilter">Approved/Pending</a>
               <a href="/filter?title=Approved">Approved</a>
               <a href="/filter?title=Pending Approval">Pending Approval</a>
               <a href="/filter?title=Disapproved">Disapproved</a>

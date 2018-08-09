@@ -12,4 +12,10 @@ class FilterController extends Controller
         $volunteers =  Volunteer::where('AppStatus', 'like', '' .$searchkey. '')->orderBy('id')->paginate(5);
         return view('volunteers/search', ['volunteers' => $volunteers]);
     }
+
+    public function multiFilter(){
+        $searchkey = \Request::get('title');
+        $volunteers =  Volunteer::where('AppStatus', '=', 'Approved')->orWhere('AppStatus', '=', 'Pending Approval')->orderBy('id')->paginate(5);
+        return view('volunteers/search', ['volunteers' => $volunteers]);
+    }
 }

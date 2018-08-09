@@ -24,3 +24,4 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('/search', 'SearchController@search');
 
 Route::get('/filter', 'FilterController@filter');
+Route::get('/multiFilter', 'FilterController@multiFilter');
