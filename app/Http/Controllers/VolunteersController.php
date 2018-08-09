@@ -48,6 +48,7 @@ class VolunteersController extends Controller
         $volunteer->lastName = $request->input('lastName');
         $volunteer->userName = $request->input('userName');
         $volunteer->password = $request->input('password');
+        $volunteer->user_id = auth()->user()->id;
         $volunteer->save();
         
         return redirect('/volunteers')->with('success', 'Volunteer Created!');

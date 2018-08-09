@@ -18,4 +18,4 @@ Route::get('/about', 'PagesController@about');
 Route::resource('volunteers', 'VolunteersController');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
