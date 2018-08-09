@@ -22,6 +22,14 @@
                     {{Form::text('password', $vol->password, ['class' => 'form-control', 'placeholder' => 'Password'])}}
                 </div>
             </div>
+            &nbsp;
+
+            <div class="form-row">
+                {{Form::label('status', 'Status', ['class' => 'col-lg-2 control-label'] )}}
+                <div class="col col-md-2">
+                    {!! Form::select('status', ['Active' => 'Active', 'Inactive' => 'Inactive', 'Approved' => 'Approved', 'Pending Approval' => 'Pending Approval', 'Disapproved' => 'Disapproved'], 'Pending Approval', ['class' => 'form-control', 'value' => '{{ $vol->status }}' ]) !!}
+                </div>
+            </div>
             <div style="padding-top: 10px">
                 {{Form::hidden('_method', 'PUT')}}
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
