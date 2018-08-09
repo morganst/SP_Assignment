@@ -28,7 +28,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function Volunteer() {
+    public function volunteer() {
         return $this->hasMany('App\Volunteer');
     }
 }

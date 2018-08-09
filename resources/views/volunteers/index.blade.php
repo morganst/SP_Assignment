@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <h1>Volunteer Index</h1>
-        <div class="text-right col col-sm-8"><a href="/volunteers/create" class="btn btn-md btn-secondary">Add New</a></div>    
-    </div>
-    <div>Here you can view and edit volunteers</div><br />
+    
+    <h1>Volunteer Index</h1>
+    <div>Here you can view and edit volunteers</div>
+    <div class="text-right"><a href="/volunteers/create" class="btn btn-md btn-success">Add New</a></div>  
+    <hr>
     @if(count($volunteers) > 0)
+        <div class="row">
+            <div class="col-3 col-lg-3">Name</div>
+            <div class="col-2 col-lg-2">username</div>
+            <div class="col-3 col-lg-3">Created</div>
+        </div>
+        <br />
         @foreach($volunteers as $volunteer)
             <div class="row">
-                <div class="col-3 col-md-3">{{$volunteer->firstName}} {{$volunteer->lastName}}</div>
-                <div class="col-3 col-md-3">{{$volunteer->userName}}</div>
-            <div class="col-3 col-md-3">{{$volunteer->created_at}}</div>
-                <div class"col-3 col-md-3">
+                <div class="col-3 col-lg-3">{{$volunteer->firstName}} {{$volunteer->lastName}}</div>
+                <div class="col-2 col-lg-2">{{$volunteer->userName}}</div>
+                <div class="col-3 col-lg-3">{{$volunteer->created_at}} by: {{$volunteer->user->name}}</div>
+                <div class"col-3 col-lg-3">
                     <div class="btn-group">
                         <a class="btn btn-secondary" href="/volunteers/{{$volunteer->id}}" role="button">View</a>
                         <a class="btn btn-primary active" href="/volunteers/{{$volunteer->id}}/edit" role="button">Edit</a>
@@ -29,4 +35,5 @@
     @else
         <p>No volunteers found</p>
     @endif
+    </hr>
 @endsection
