@@ -18,11 +18,10 @@
                     <div>
                         <ul>
                             <li><a class="p-2 text-dark" href="/volunteers/">Volunteer Index</a></li>
-                            <li><a class="p-2 text-dark" href="/volunteers/create">New Volunteer</a></li>
+                            <li><a class="p-2 text-dark" href="/volunteers/create">Add New Volunteer</a></li>
                         </ul>
                     </div>
-
-                    
+                    <br />
                         <h5>Your Volunteers</h5>
                         <table class="table">
                                 <thead>
@@ -41,7 +40,8 @@
                                             <td>{{$vol->firstName}}</td>
                                             <td>{{$vol->lastName}}</td>
                                             <td>{{$vol->userName}}</td>
-                                            <td><a class="p-2 text-dark" href="/volunteers/{{$vol->id}}">View</a></td>
+                                            <i class="fa fa-search"></i>
+                                            <td><a class="p-2 text-dark" href="/volunteers/{{$vol->id}}"><span class="fas fa-search"></span>View</a></i></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

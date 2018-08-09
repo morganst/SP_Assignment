@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-3 col-md-3">{{$volunteer->firstName}} {{$volunteer->lastName}}</div>
                 <div class="col-3 col-md-3">{{$volunteer->userName}}</div>
-                <div class="col-3 col-md-3">{{$volunteer->created_at}}</div>
+            <div class="col-3 col-md-3">{{$volunteer->created_at}}</div>
                 <div class"col-3 col-md-3">
                     <div class="btn-group">
                         <a class="btn btn-secondary" href="/volunteers/{{$volunteer->id}}" role="button">View</a>

@@ -21,7 +21,7 @@
         <div>username: {{$vol->userName}}</div>
     </hr>
     <hr>
-<small>Created: {{$vol->created_at}} Created by: {{$vol->user_id}}</small>
+<small>Created: {{$vol->created_at}} Created by: {{$vol->user->name}}</small>
         <div class="text-right">
             <a href="/volunteers" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
         </div>
