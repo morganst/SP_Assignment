@@ -24,6 +24,7 @@
             </div>
             <div style="padding-top: 10px">
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                <a class="btn btn-secondary" href="/volunteers" role="button">Back</a>
             </div>
         </form>
     {!! Form::close() !!}
