@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -40,8 +41,7 @@
                                             <td>{{$vol->firstName}}</td>
                                             <td>{{$vol->lastName}}</td>
                                             <td>{{$vol->userName}}</td>
-                                            <i class="fa fa-search"></i>
-                                            <td><a class="p-2 text-dark" href="/volunteers/{{$vol->id}}"><span class="fas fa-search"></span>View</a></i></td>
+                                            <td><a class="p-2 text-dark" href="/volunteers/{{$vol->id}}">View <span class="far fa-eye"></span></a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
