@@ -3,17 +3,20 @@
     <nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="/">Home</a>
       <a class="p-2 text-dark" href="/about">About</a>
-      <a class="p-2 text-dark" href="/volunteers/">Volunteer Index</a>
+      @Auth
+        <a class="p-2 text-dark" href="/volunteers/">Volunteer Index</a>
+      @endAuth
     </nav>
     <div class="text-right">
       <div class="btn-group">
         @guest
-          <a class="btn btn-primary" data-toggle="button" href="{{ route('register') }}"{{ __('Register') }}>Sign up</a>
-          <a class="btn btn-secondary" data-toggle="button" href="{{ route('login') }}"{{ __('Login') }}>Login</a>
+          <a class="btn btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
+          <a class="btn btn-secondary" href="{{ route('register') }}">{{ __('Register') }}</a>
         @else
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                  {{ Auth::user()->name }} <span class="caret"></span>
+                  {{ Auth::user()->name }} <span class="caret">
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -28,6 +31,7 @@
                   </form>
               </div>
           </li>
+        </ul>
         @endguest
       </div>
     </div>
