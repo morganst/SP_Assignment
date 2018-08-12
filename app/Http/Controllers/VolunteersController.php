@@ -105,7 +105,8 @@ class VolunteersController extends Controller
             'firstName' => 'required',
             'lastName' => 'required',
             'userName' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'status' => 'required'
         ]);
 
         $volunteer = Volunteer::find($id);
@@ -113,6 +114,7 @@ class VolunteersController extends Controller
         $volunteer->lastName = $request->input('lastName');
         $volunteer->userName = $request->input('userName');
         $volunteer->password = $request->input('password');
+        $volunteer->status = $request->input('status');
         $volunteer->save();
         
         return redirect('/volunteers')->with('success', 'Volunteer Updated!');
