@@ -52,6 +52,9 @@ class VolunteersController extends Controller
             'location' => 'required',
             'availability' => 'required',
             'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip' => 'required',
             'education' => 'required',
             'licenses' => 'required',
             'copyLicense' => 'required',
@@ -68,6 +71,10 @@ class VolunteersController extends Controller
         $volunteer->skills = $request->input('skills');
         $volunteer->availability = $request->input('availability');
         $volunteer->address = $request->input('address');
+        $volunteer->address = $request->input('address2');
+        $volunteer->address = $request->input('city');
+        $volunteer->address = $request->input('state');
+        $volunteer->address = $request->input('zip');
         $volunteer->homePhone = $request->input('homePhone');
         $volunteer->cellPhone = $request->input('cellPhone');
         $volunteer->education = $request->input('education');
@@ -131,6 +138,9 @@ class VolunteersController extends Controller
             'location' => 'required',
             'availability' => 'required',
             'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip' => 'required',
             'education' => 'required',
             'licenses' => 'required',
             'copyLicense' => 'required',
@@ -147,6 +157,10 @@ class VolunteersController extends Controller
         $volunteer->skills = $request->input('skills');
         $volunteer->availability = $request->input('availability');
         $volunteer->address = $request->input('address');
+        $volunteer->address = $request->input('address2');
+        $volunteer->address = $request->input('city');
+        $volunteer->address = $request->input('state');
+        $volunteer->address = $request->input('zip');
         $volunteer->homePhone = $request->input('homePhone');
         $volunteer->cellPhone = $request->input('cellPhone');
         $volunteer->education = $request->input('education');
