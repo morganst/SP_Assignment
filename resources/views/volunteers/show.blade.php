@@ -22,6 +22,11 @@
         <div>Center Applied For: {{$vol->location}}</div>
         <div>Skills: {{$vol->skills}}</div>
         <div>Availability: {{$vol->availability}}</div>
+        <div>Address Line 1: {{$vol->address}}</div>
+        <div>Address Line 2: {{$vol->address2}}</div>
+        <div>City: {{$vol->city}}</div>
+        <div>State: {{$vol->state}}</div>
+        <div>Zip: {{$vol->zip}}</div>
         <div>Home Phone: {{$vol->homePhone}}</div>
         <div>Cell Phone: {{$vol->cellPhone}}</div>
         <div>Education: {{$vol->education}}</div>
