@@ -19,3 +19,5 @@ Route::resource('volunteers', 'VolunteersController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('/search', 'SearchController@search');
