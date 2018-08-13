@@ -17,7 +17,7 @@
         <hr>
         <div>First Name: {{$vol->firstName}}</div>
         <div>Last Name: {{$vol->lastName}}</div>
-        <div>username: {{$vol->username}}</div>
+        <div>username: {{$vol->userName}}</div>
         <div>status: {{$vol->status}}</div>
         <div>Center Applied For: {{$vol->location}}</div>
         <div>Skills: {{$vol->skills}}</div>
