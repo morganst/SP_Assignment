@@ -133,9 +133,6 @@ class VolunteersController extends Controller
             'lastName' => 'required',
             'userName' => 'required',
             'password' => 'required',
-<<<<<<< HEAD
-            'status' => 'required'
-=======
             'status' => 'required',
             'location' => 'required',
             'availability' => 'required',
@@ -146,7 +143,6 @@ class VolunteersController extends Controller
             'education' => 'required',
             'copyLicense' => 'required',
             'copySS' => 'required'
->>>>>>> add_all_info_required
         ]);
 
         $volunteer = Volunteer::find($id);
@@ -155,8 +151,6 @@ class VolunteersController extends Controller
         $volunteer->userName = $request->input('userName');
         $volunteer->password = $request->input('password');
         $volunteer->status = $request->input('status');
-<<<<<<< HEAD
-=======
         $volunteer->location = $request->input('location');
         $volunteer->skills = $request->input('skills');
         $volunteer->availability = $request->input('availability');
@@ -175,7 +169,6 @@ class VolunteersController extends Controller
         $volunteer->ecAddress = $request->input('ecAddress');
         $volunteer->copyLicense = $request->input('copyLicense');
         $volunteer->copySS = $request->input('copySS');
->>>>>>> add_all_info_required
         $volunteer->save();
         
         return redirect('/volunteers')->with('success', 'Volunteer Updated!');
