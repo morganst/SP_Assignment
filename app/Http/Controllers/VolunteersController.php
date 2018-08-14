@@ -48,7 +48,16 @@ class VolunteersController extends Controller
             'lastName' => 'required',
             'userName' => 'required',
             'password' => 'required',
-            'status' => 'required'
+            'status' => 'required',
+            'location' => 'required',
+            'availability' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip' => 'required',
+            'education' => 'required',
+            'copyLicense' => 'required',
+            'copySS' => 'required'
         ]);
 
         $volunteer = new Volunteer;
@@ -56,8 +65,26 @@ class VolunteersController extends Controller
         $volunteer->lastName = $request->input('lastName');
         $volunteer->userName = $request->input('userName');
         $volunteer->password = $request->input('password');
-        $volunteer->user_id = auth()->user()->id;
         $volunteer->status = $request->input('status');
+        $volunteer->location = $request->input('location');
+        $volunteer->skills = $request->input('skills');
+        $volunteer->availability = $request->input('availability');
+        $volunteer->address = $request->input('address');
+        $volunteer->address2 = $request->input('address2');
+        $volunteer->city = $request->input('city');
+        $volunteer->state = $request->input('state');
+        $volunteer->zip = $request->input('zip');
+        $volunteer->homePhone = $request->input('homePhone');
+        $volunteer->cellPhone = $request->input('cellPhone');
+        $volunteer->education = $request->input('education');
+        $volunteer->licenses = $request->input('licenses');
+        $volunteer->ecName = $request->input('ecName');
+        $volunteer->ecPhone = $request->input('ecPhone');
+        $volunteer->ecEmail = $request->input('ecEmail');
+        $volunteer->ecAddress = $request->input('ecAddress');
+        $volunteer->copyLicense = $request->input('copyLicense');
+        $volunteer->copySS = $request->input('copySS');
+        $volunteer->user_id = auth()->user()->id;
         $volunteer->save();
         
         return redirect('/volunteers')->with('success', 'Volunteer Created!');
@@ -106,7 +133,20 @@ class VolunteersController extends Controller
             'lastName' => 'required',
             'userName' => 'required',
             'password' => 'required',
+<<<<<<< HEAD
             'status' => 'required'
+=======
+            'status' => 'required',
+            'location' => 'required',
+            'availability' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip' => 'required',
+            'education' => 'required',
+            'copyLicense' => 'required',
+            'copySS' => 'required'
+>>>>>>> add_all_info_required
         ]);
 
         $volunteer = Volunteer::find($id);
@@ -115,6 +155,27 @@ class VolunteersController extends Controller
         $volunteer->userName = $request->input('userName');
         $volunteer->password = $request->input('password');
         $volunteer->status = $request->input('status');
+<<<<<<< HEAD
+=======
+        $volunteer->location = $request->input('location');
+        $volunteer->skills = $request->input('skills');
+        $volunteer->availability = $request->input('availability');
+        $volunteer->address = $request->input('address');
+        $volunteer->address2 = $request->input('address2');
+        $volunteer->city = $request->input('city');
+        $volunteer->state = $request->input('state');
+        $volunteer->zip = $request->input('zip');
+        $volunteer->homePhone = $request->input('homePhone');
+        $volunteer->cellPhone = $request->input('cellPhone');
+        $volunteer->education = $request->input('education');
+        $volunteer->licenses = $request->input('licenses');
+        $volunteer->ecName = $request->input('ecName');
+        $volunteer->ecPhone = $request->input('ecPhone');
+        $volunteer->ecEmail = $request->input('ecEmail');
+        $volunteer->ecAddress = $request->input('ecAddress');
+        $volunteer->copyLicense = $request->input('copyLicense');
+        $volunteer->copySS = $request->input('copySS');
+>>>>>>> add_all_info_required
         $volunteer->save();
         
         return redirect('/volunteers')->with('success', 'Volunteer Updated!');
