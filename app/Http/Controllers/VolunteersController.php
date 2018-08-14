@@ -56,7 +56,6 @@ class VolunteersController extends Controller
             'state' => 'required',
             'zip' => 'required',
             'education' => 'required',
-            'licenses' => 'required',
             'copyLicense' => 'required',
             'copySS' => 'required'
         ]);
@@ -142,7 +141,6 @@ class VolunteersController extends Controller
             'state' => 'required',
             'zip' => 'required',
             'education' => 'required',
-            'licenses' => 'required',
             'copyLicense' => 'required',
             'copySS' => 'required'
         ]);

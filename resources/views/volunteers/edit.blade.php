@@ -36,7 +36,7 @@
             <div class="form-row">
                 {!! Form::label('status', 'Status', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {!!  Form::select('status', ['Active' => 'Active', 'Inactive' => 'Inactive', 'Approved' => 'Approved', 'Pending Approval' => 'Pending Approval', 'Disapproved' => 'Disapproved'],  'Pending Approval', ['class' => 'form-control' ]) !!}
+                    {!!  Form::select('status', ['Active' => 'Active', 'Inactive' => 'Inactive', 'Approved' => 'Approved', 'Pending Approval' => 'Pending Approval', 'Disapproved' => 'Disapproved'],  $vol->status, ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
@@ -106,7 +106,7 @@
             <div class="form-row">
                 {!! Form::label('education', 'Education', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {{Form::text('education', $vol->education, ['class' => 'form-control', 'placeholder' => 'Education'])}}
+                    {!!  Form::select('education', ['Some High School' => 'Some High School', 'High School Grad' => 'High School Grad', 'Some College' => 'Some College', 'In College' => 'In College', 'College Grad' => 'College Grad', 'Grad Student' => 'Grad Student', 'Masters or Higher' => 'Masters or Higher'],  $vol->education, ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
@@ -148,14 +148,14 @@
             <div class="form-row">
             {!! Form::label('copyLicense', 'Do we have a copy of license?', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {{Form::text('copyLicense', $vol->copyLicense, ['class' => 'form-control', 'placeholder' => '0 or 1'])}}
+                    {!!  Form::select('copyLicense', ['0' => 'No', '1' => 'Yes'],  $vol->copyLicense, ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
             <div class="form-row">
             {!! Form::label('copySS', 'Do we have a copy of SS?', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {{Form::text('copySS', $vol->copySS, ['class' => 'form-control', 'placeholder' => '0 or 1'])}}
+                    {!!  Form::select('copySS', ['0' => 'No', '1' => 'Yes'],  $vol->copySS, ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
