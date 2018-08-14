@@ -12,7 +12,19 @@
                     <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
                 </div>
             </div>
-        </form>  
+    </form>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="dropdown">
+              <a href="javascript:void(0)" class="nav-link">Volunteer Filter</a>
+              <div class="dropdown-content">
+                <a href="/multiFilter">Approved/Pending</a>
+                <a href="/filter?title=Approved">Approved</a>
+                <a href="/filter?title=Pending Approval">Pending Approval</a>
+                <a href="/filter?title=Disapproved">Disapproved</a>
+                <a href="/filter?title=Inactive">Inactive</a>
+                <a href="/volunteers">All</a>
+              </div>  
     <hr>
     @if(count($volunteers) > 0)
         <div class="row">
