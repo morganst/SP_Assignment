@@ -42,8 +42,8 @@
                     <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
                 </div>
             </div>
-    </form> 
-    <br>
+    </form>
+    <br> 
     <li class="dropdown">
         <a href="javascript:void(0)" class="btn btn-md btn-success">Volunteer Filter</a>
         <div class="dropdown-content">
