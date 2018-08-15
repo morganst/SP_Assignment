@@ -4,7 +4,7 @@
     <style>
     li a, .dropbtn {
         display: inline-block;
-        color: white;
+        
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -47,33 +47,31 @@
     <li class="dropdown">
         <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter</a>
         <div class="dropdown-content">
-          <a href="/filter?title=Approved">Most Recent</a>
-          <a href="/filter?title=Pending Approval">By Center</a>
+          <a href="/filterTime">Most Recent</a>
+          <a href="/filterAlpha">By Center</a>
           <a href="/opportunities">All</a>
         </div>
     </li>
     <hr>
-    @if(count($volunteers) > 0)
+    @if(count($opportunities) > 0)
         <div class="row">
-            <div class="col-3 col-lg-3">Name</div>
-            <div class="col-2 col-lg-2">username</div>
+            <div class="col-3 col-lg-3">Opportunity Name</div>
+            <div class="col-2 col-lg-2">Center</div>
             <div class="col-2 col-lg-2">Created by</div>
-            <div class="col-2 col-lg-2">Status</div>
         </div>
         <br />
-        @foreach($volunteers as $volunteer)
+        @foreach($opportunities as $opportunity)
             <div class="row">
-                <div class="col-3 col-lg-3">{{$volunteer->firstName}} {{$volunteer->lastName}}</div>
-                <div class="col-2 col-lg-2">{{$volunteer->userName}}</div>
-                <div class="col-2 col-lg-2">{{$volunteer->user['name']}}</div>
-                <div class="col-2 col-lg-2">{{$volunteer->status}}</div>
+                <div class="col-3 col-lg-3">{{$opportunity->name}}</div>
+                <div class="col-2 col-lg-2">{{$opportunity->center}}</div>
+                <div class="col-2 col-lg-2">{{$opportunity->user['name']}}</div>
                 <div class"col-3 col-lg-3">
                     <div class="btn-group">
-                        <a class="btn btn-secondary" href="/volunteers/{{$volunteer->id}}" role="button">View</a>
+                        <a class="btn btn-secondary" href="/opportunities/{{$opportunity->id}}" role="button">View</a>
                         
-                        @if(Auth::user()->id == $volunteer->user_id)
-                            <a class="btn btn-primary active" href="/volunteers/{{$volunteer->id}}/edit" role="button">Edit</a>
-                            {!!Form::open(['action' => ['VolunteersController@destroy', $volunteer->id], 'method' => 'POST', 'class' => 'btn btn-sm btn-danger'])!!}
+                        @if(Auth::user()->id == $opportunity->user_id)
+                            <a class="btn btn-primary active" href="/opportunities/{{$opportunity->id}}/edit" role="button">Edit</a>
+                            {!!Form::open(['action' => ['OpportunityController@destroy', $opportunity->id], 'method' => 'POST', 'class' => 'btn btn-sm btn-danger'])!!}
                                 {{Form::hidden('_method', 'DELETE')}}
                                 {{Form::submit('Delete', ['class' => 'btn btn-sm btn-danger'])}}
                             {!!Form::close()!!}
@@ -87,7 +85,7 @@
             </div>
             <div class="row">&nbsp;</div>
         @endforeach
-    {{$volunteers->links()}}
+    {{$opportunities->links()}}
     @else
         <p>No opportunities found</p>
     @endif

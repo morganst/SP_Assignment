@@ -15,6 +15,9 @@ class CreateOpportunitiesTable extends Migration
     {
         Schema::create('opportunities', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('center');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -20,8 +20,8 @@ class OpportunityController extends Controller
      */
     public function index()
     {
-        $opporunities = Opportunity::orderBy('created_at', 'des')->paginate(10);
-        return view('opporunities.index')->with('opporunities', $opporunities);
+        $opportunities = Opportunity::orderBy('created_at', 'des')->paginate(10);
+        return view('opportunities.index')->with('opportunities', $opportunities);
     }
 
     /**
@@ -31,7 +31,7 @@ class OpportunityController extends Controller
      */
     public function create()
     {
-        return view('opporunities.create');
+        return view('opportunities.create');
     }
 
     /**

@@ -13,14 +13,19 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/about', 'PagesController@about');
 
 Route::resource('volunteers', 'VolunteersController');
+Auth::routes();
+
+Route::resource('opportunities', 'OpportunityController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/search', 'SearchController@search');
+Route::get('/search', 'SearchController@searchOpp');
 
 Route::get('/filter', 'FilterController@filter');
 Route::get('/multiFilter', 'FilterController@multiFilter');
+Route::get('/filterAlpha', 'FilterController@filterAlpha');
+Route::get('/filterTime', 'FilterController@filterTime');

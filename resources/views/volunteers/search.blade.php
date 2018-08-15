@@ -4,7 +4,7 @@
     <style>
     li a, .dropbtn {
         display: inline-block;
-        color: white;
+
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
