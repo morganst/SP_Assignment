@@ -7,7 +7,7 @@ class FilterController extends Controller
    
   public function filter(){
         $searchkey = \Request::get('title');
-        $volunteers =  Volunteer::where('status', 'like', '' .$searchkey. '')->orderBy('id')->paginate(5);
+        $volunteers =  Volunteer::where('status', 'like', '' .$searchkey. '')->orderBy('id')->paginate(10);
         return view('volunteers/search', ['volunteers' => $volunteers]);
     }
     public function multiFilter(){

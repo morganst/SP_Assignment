@@ -30,4 +30,5 @@
     </div>
     
 </body>
+    @include('inc.footer')
 </html>
