@@ -2,12 +2,13 @@
 
 @section('content')
     <h1>Volunteer Index</h1>
-    <div>Here you can view and edit volunteers</div>
-    <div class="text-right"><a href="/volunteers/create" class="btn btn-md btn-primary">Add New</a></div>  
-    <form class="form-inline my-2 my-md-0 nav" role="search" method="get" action="{{url("/search")}}">
+    <div style="padding-bottom: 1em">Here you can view and edit volunteers</div> 
+    <form class="form-inline my-2 my-md-2 nav" role="search" method="get" action="{{url("/search")}}">
             <div class="input-group">
-                <input type="text" class="form-control mr-sm-2" placeholder="Search" name="title">
-                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
+                <input type="text" class="form-control mr-sm-0" placeholder="Search" name="title">
+                <div class="input-group-append">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
+                </div>
             </div>
     </form> 
     <br>
@@ -22,6 +23,7 @@
             <a href="/volunteers">All</a>
         </div>
     </li>
+    <div class="text-right"><a href="/volunteers/create" class="btn btn-md btn-primary">Add New</a></div>
     <hr>
     @if(count($volunteers) > 0)
         <div class="row">
