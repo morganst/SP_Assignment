@@ -36,7 +36,7 @@
             <div class="form-row">
                 {!! Form::label('status', 'Status', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {!!  Form::select('status', ['Active' => 'Active', 'Inactive' => 'Inactive', 'Approved' => 'Approved', 'Pending Approval' => 'Pending Approval', 'Disapproved' => 'Disapproved'],  'Pending Approval', ['class' => 'form-control' ]) !!}
+                    {!!  Form::select('status', ['Inactive' => 'Inactive', 'Approved' => 'Approved', 'Pending Approval' => 'Pending Approval', 'Disapproved' => 'Disapproved'],  'Pending Approval', ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
