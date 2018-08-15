@@ -1,6 +1,8 @@
 @extends('layouts.app')
-
+  
 @section('content')
-    <h1>{{$title}}</h1>
-    <p>Welcome to the Volunteer Page</p>
+<div class="jumbotron text-center">
+<h1>{{$title}}</h1> 
+<p><a class="btn btn-primary btn-lg" href="/volunteers" role="button">Manage Volunteers</a></p>
+<p><a class="btn btn-primary btn-lg" href="/" role="button">Manage Opportunities</a></p>
 @endsection
