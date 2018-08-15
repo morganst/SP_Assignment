@@ -34,8 +34,7 @@
     </style>
     <h1>Opportunity Index</h1>
     <div>Here you can view and edit opportunities</div>
-    <div class="text-right"><a href="/opportunities/create" class="btn btn-md btn-success">Add New</a></div>  
-    <form class="form-inline my-2 my-md-0 nav" role="search" method="get" action="{{url("/search")}}">
+    <form class="form-inline my-2 my-md-0 nav" role="search" method="get" action="{{url("/searchOpp")}}">
             <div class="input-group">
                 <input type="text" class="form-control mr-sm-2" placeholder="Search" name="title">
                 <div class="input-group-btn">
@@ -45,13 +44,14 @@
     </form> 
     <br>
     <li class="dropdown">
-        <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter</a>
+        <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter <span class="fas fa-caret-down"/></a>
         <div class="dropdown-content">
           <a href="/filterTime">Most Recent</a>
           <a href="/filterAlpha">By Center</a>
           <a href="/opportunities">All</a>
         </div>
     </li>
+    <div class="text-right"><a href="/opportunities/create" class="btn btn-md btn-primary">Add New</a></div>
     <hr>
     @if(count($opportunities) > 0)
         <div class="row">

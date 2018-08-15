@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/search', 'SearchController@search');
-Route::get('/search', 'SearchController@searchOpp');
+Route::get('/searchOpp', 'SearchController@searchOpp');
 
 Route::get('/filter', 'FilterController@filter');
 Route::get('/multiFilter', 'FilterController@multiFilter');
