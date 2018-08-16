@@ -7,17 +7,17 @@
                 <h5 class="mb-1">Visit our GitHub!</h5>
             </li>
             <li class="list-inline-item">
-                <a href="https://www.github.com/morganst/SP_Assignment" class="btn btn-outline-white btn-rounded" role="button"><span class="fab fa-github fa-3x"/></a>
+                <a href="https://www.github.com/morganst/SP_Assignment" target = "_blank" class="btn btn-outline-white btn-rounded" role="button"><span class="fab fa-github fa-3x"/></a>
             </li>
         </ul>
     </div>
-    
+
     <div class="footer-copyright text-center py-3">
         Morgan Sturtz | Connor Ackerman | Hika Workneh | Brandon Bradlee
         <br />
         © 2018 Copyright
     </div>
-    
+
 </footer>
 <style>
 
