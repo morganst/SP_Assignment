@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Edit Volunteer</h1>
-    <p>Please enter information for updating thjis volunteer</p>
+    <p>Please enter information for updating this volunteer</p>
     {!! Form::open(['action' => ['VolunteersController@update', $vol->id], 'method' => 'POST']) !!}
         <form>
             <div class="form-row">

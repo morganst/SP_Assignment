@@ -22,6 +22,9 @@
                     <a class="dropdown-item" href="{{ route('volunteers.index') }}">
                         {{ __('Volunteer Index') }}
                     </a>
+                    <a class="dropdown-item" href="{{ route('opportunities.index') }}">
+                      {{ __('Opportunity Index') }}
+                  </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
