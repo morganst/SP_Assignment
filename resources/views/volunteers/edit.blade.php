@@ -43,7 +43,7 @@
             <div class="form-row">
                 {!! Form::label('location', 'Perferred Center', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {{Form::text('location', $vol->location, ['class' => 'form-control', 'placeholder' => 'Perferred Center'])}}
+                    {!!  Form::select('location', ['Main Campus' => 'Main Campus', 'Animal Shelter' => 'Animal Shelter', 'Homeless Shelter' => 'Homeless Shelter', 'VA Office' => 'VA Office'], $vol->location, ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;
