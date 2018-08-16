@@ -46,9 +46,14 @@
     <li class="dropdown">
         <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter <span class="fas fa-caret-down"/></a>
         <div class="dropdown-content">
-          <a href="/filterTime">Most Recent</a>
-          <a href="/filterAlpha">By Center</a>
-          <a href="/opportunities">All</a>
+         
+            <a href="/filterAlpha">By Center</a>
+            <a href="/Oppfilter?title=Main Campus">Main Campus</a>
+            <a href="/Oppfilter?title=Animal Shelter">Animal Shelter</a>
+            <a href="/Oppfilter?title=Homeless Shelter"> Homeless Shelter</a>
+            <a href="/Oppfilter?title=VA Office">VA Office</a>
+            <a href="/filterTime">Most Recent</a>
+            <a href="/opportunities">All</a>
         </div>
     </li>
     <div class="text-right"><a href="/opportunities/create" class="btn btn-md btn-primary">Add New</a></div>
