@@ -29,3 +29,4 @@ Route::get('/filter', 'FilterController@filter');
 Route::get('/multiFilter', 'FilterController@multiFilter');
 Route::get('/filterAlpha', 'FilterController@filterAlpha');
 Route::get('/filterTime', 'FilterController@filterTime');
+Route::get('/Oppfilter', 'FilterController@Oppfilter');
