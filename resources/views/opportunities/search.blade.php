@@ -41,14 +41,18 @@
                     <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="glyphicon glyphicon-search"></i>Search</button>
                 </div>
             </div>
-    </form> 
+    </form>
     <br>
     <li class="dropdown">
         <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter <span class="fas fa-caret-down"/></a>
         <div class="dropdown-content">
-          <a href="/filterTime">Most Recent</a>
-          <a href="/filterAlpha">By Center</a>
-          <a href="/opportunities">All</a>
+            <a href="/filterAlpha">By Center</a>
+            <a href="/Oppfilter?title=Main Campus">Main Campus</a>
+            <a href="/Oppfilter?title=Animal Shelter">Animal Shelter</a>
+            <a href="/Oppfilter?title=Homeless Shelter"> Homeless Shelter</a>
+            <a href="/Oppfilter?title=VA Office">VA Office</a>
+            <a href="/filterTime">Most Recent</a>
+            <a href="/opportunities">All</a>
         </div>
     </li>
     <div class="text-right"><a href="/opportunities/create" class="btn btn-md btn-primary">Add New</a></div>
@@ -68,7 +72,7 @@
                 <div class"col-3 col-lg-3">
                     <div class="btn-group">
                         <a class="btn btn-secondary" href="/opportunities/{{$opportunity->id}}" role="button">View</a>
-                        
+
                         @if(Auth::user()->id == $opportunity->user_id)
                             <a class="btn btn-primary active" href="/opportunities/{{$opportunity->id}}/edit" role="button">Edit</a>
                             {!!Form::open(['action' => ['OpportunityController@destroy', $opportunity->id], 'method' => 'POST', 'class' => 'btn btn-sm btn-danger'])!!}
