@@ -86,7 +86,7 @@ class VolunteersController extends Controller
         $volunteer->copySS = $request->input('copySS');
         $volunteer->user_id = auth()->user()->id;
         $volunteer->save();
-        
+
         return redirect('/volunteers')->with('success', 'Volunteer Created!');
     }
 
@@ -170,7 +170,7 @@ class VolunteersController extends Controller
         $volunteer->copyLicense = $request->input('copyLicense');
         $volunteer->copySS = $request->input('copySS');
         $volunteer->save();
-        
+
         return redirect('/volunteers')->with('success', 'Volunteer Updated!');
     }
 

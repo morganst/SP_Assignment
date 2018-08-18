@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Volunteer;
 
 class PagesController extends Controller
 {
@@ -16,8 +17,21 @@ class PagesController extends Controller
         $title = 'About us';
         return view('pages.about')->with('title', $title);
     }
-    public function matches() {
-        //return view('pages.index', compact('title'));
-        return view('pages.matches');
+
+    public function show($id)
+    {
+        $vol = Volunteer::find($id);
+        return view('pages.matches')->with('vol', $vol);
     }
+    public function matches($id)
+    {
+        $vol = Volunteer::find($id);
+
+        if(auth()->user()->id !== $vol->user_id) {
+            return redirect('volunteers')->with('error', 'Unauthorized page');
+        }
+
+        return view('pages.matches')->with('vol', $vol);
+    }
+
 }

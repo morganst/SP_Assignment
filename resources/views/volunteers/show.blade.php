@@ -6,6 +6,10 @@
 
     @if(Auth::user()->id == $vol->user_id)
         <div class="text-right">
+
+            <p><a class="btn btn-primary btn-lg" href="/{{$vol->id}}/matches" role="button">Matches</a></p>
+
+            
             <a href="/volunteers/{{$vol->id}}/edit" class="btn btn-secondary" style="color: #F2F2F2" role="button">Edit</a>
             {!!Form::open(['action' => ['VolunteersController@destroy', $vol->id], 'method' => 'POST', 'class' => 'btn btn-danger', 'style' => 'padding: 0'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
@@ -37,11 +41,11 @@
         <div>Emergency Contact Address: {{$vol->ecAddress}}</div>
         <div>Have Copy of License: {{$vol->copyLicense}}</div>
         <div>Have Copy of SS: {{$vol->copySS}}</div>
-    </hr>
+
     <hr>
 <small>Created: {{$vol->created_at}} Created by: {{$vol->user->name}}</small>
         <div class="text-right">
             <a href="{{ URL::previous() }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
         </div>
-    </hr>
+
 @endsection
