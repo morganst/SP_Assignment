@@ -13,24 +13,9 @@ class PagesController extends Controller
         return view('pages.index')->with('title', $title);
     }
 
-    public function about() {
-        $title = 'About us';
-        return view('pages.about')->with('title', $title);
-    }
-
-    public function show($id)
-    {
-        $vol = Volunteer::find($id);
-        return view('pages.matches')->with('vol', $vol);
-    }
     public function matches($id)
     {
         $vol = Volunteer::find($id);
-
-        if(auth()->user()->id !== $vol->user_id) {
-            return redirect('volunteers')->with('error', 'Unauthorized page');
-        }
-
         return view('pages.matches')->with('vol', $vol);
     }
 

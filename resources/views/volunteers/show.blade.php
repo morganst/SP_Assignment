@@ -7,7 +7,7 @@
     @if(Auth::user()->id == $vol->user_id)
         <div class="text-right">
 
-            <p><a class="btn btn-primary btn-lg" href="/{{$vol->id}}/matches" role="button">Matches</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/pages/{{$vol->id}}/matches" role="button">Matches</a></p>
 
             
             <a href="/volunteers/{{$vol->id}}/edit" class="btn btn-secondary" style="color: #F2F2F2" role="button">Edit</a>

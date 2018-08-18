@@ -192,4 +192,5 @@ class VolunteersController extends Controller
 
         return redirect('/volunteers')->with('success', 'Volunteer Deleted!');
     }
+
 }
