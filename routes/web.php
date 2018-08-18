@@ -30,3 +30,8 @@ Route::get('/multiFilter', 'FilterController@multiFilter');
 Route::get('/filterAlpha', 'FilterController@filterAlpha');
 Route::get('/filterTime', 'FilterController@filterTime');
 Route::get('/Oppfilter', 'FilterController@Oppfilter');
+
+Route::get('/matches', function () {
+    return view('pages.matches');
+});
+

@@ -16,5 +16,8 @@ class PagesController extends Controller
         $title = 'About us';
         return view('pages.about')->with('title', $title);
     }
-
+    public function matches() {
+        //return view('pages.index', compact('title'));
+        return view('pages.matches');
+    }
 }
