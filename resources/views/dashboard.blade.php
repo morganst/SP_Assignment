@@ -17,10 +17,8 @@
 
                     <h4>Manage your volunteer information</h4>
                     <div>
-                        <ul>
-                            <li><a class="p-2 text-dark" href="/volunteers/">Volunteer Index</a></li>
-                            <li><a class="p-2 text-dark" href="/volunteers/create">Add New Volunteer</a></li>
-                        </ul>
+                        <p><a class="btn btn-primary btn-lg" href="/volunteers" role="button">Volunteer Index</a>
+                        <a class="btn btn-primary btn-lg" href="/opportunities" role="button">Opportunity Index</a></p>
                     </div>
                     <br />
 
