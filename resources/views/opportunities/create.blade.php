@@ -13,9 +13,9 @@
             </div>
             &nbsp;
             <div class="form-row">
-                {!! Form::label('center', 'Center', ['class' => 'col-lg-2 control-label'] )  !!}
+                {!! Form::label('center', 'Center Location', ['class' => 'col-lg-2 control-label'] )  !!}
                 <div class="col col-md-3">
-                    {{Form::text('center', '', ['class' => 'form-control', 'placeholder' => 'Center'])}}
+                    {!!  Form::select('center', ['Main Campus' => 'Main Campus', 'Animal Shelter' => 'Animal Shelter', 'Homeless Shelter' => 'Homeless Shelter', 'VA Office' => 'VA Office'], 'Main Campus', ['class' => 'form-control' ]) !!}
                 </div>
             </div>
             &nbsp;

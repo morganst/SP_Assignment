@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Volunteer;
 
 class PagesController extends Controller
 {
@@ -15,6 +16,20 @@ class PagesController extends Controller
     public function about() {
         $title = 'About us';
         return view('pages.about')->with('title', $title);
+    }
+
+    public function show($id)
+    {
+        $vol = Volunteer::find($id);
+        return view('pages.matches')->with('vol', $vol);
+    }
+    public function matches($id)
+    {
+        
+        $vol = Volunteer::find($id);
+
+        
+        return view('pages.matches')->with('vol', $vol);
     }
 
 }
