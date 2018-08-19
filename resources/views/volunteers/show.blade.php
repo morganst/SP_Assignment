@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>{{$vol->firstName}} {{$vol->lastName}}</h2>
-    <div class="">Volunteers information:</div>
+    <div class="">Volunteers Information:</div>
 
     @if(Auth::user()->id == $vol->user_id)
         <div class="text-right">

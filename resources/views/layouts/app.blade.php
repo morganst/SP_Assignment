@@ -22,13 +22,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-
     @include('inc.navbar')
-    <div class="container">
-        @include('inc.messages')
+    @include('inc.messages')
+    <div class="container content">
         @yield('content')
     </div>
-    
+    <div class="footer">
+        @include('inc.footer')
+    </div>
 </body>
-    @include('inc.footer')
+
+    <style>
+
+        html { height: 100%; }
+        body {
+            min-height:100%; 
+            position:relative; 
+            padding-bottom: 180px;
+        }
+        .footer { 
+            position: absolute; 
+            left: 0 ; right: 0; bottom: 0; 
+            height: 180px;
+        }
+
+    </style>
 </html>

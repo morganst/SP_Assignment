@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>{{$opp->firstName}}</h2>
-    <div class="">Here is where you put information about the Opportunity pulled from db</div>
+    <div class="">Opportunity Information:</div>
     
     @if(Auth::user()->id == $opp->user_id) 
         <div class="text-right">

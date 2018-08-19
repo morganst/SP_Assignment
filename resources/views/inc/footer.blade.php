@@ -1,6 +1,4 @@
-<br />
-<br />
-<footer class="footer">
+<footer>
     <div class="container">
         <ul class="list-unstyled  text-center py-2">
             <li class="list-inline-item">
@@ -34,5 +32,14 @@
     .btn-rounded:visited {
         background-color: #424242;
         color: white;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: -50px;
     }
 </style>
