@@ -4,7 +4,7 @@
 
 @if(count($opportunities) > 0)
 <div class="row">
-    <div class="col-3 col-lg-3">Opportunity Name</div>
+    <div class="col-3 col-lg-3">Opportunity Name here</div>
     <div class="col-2 col-lg-2">Center</div>
    
 </div>

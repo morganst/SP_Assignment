@@ -10,12 +10,12 @@ class FilterController extends Controller
             $volunteers =  Volunteer::where('status', 'like', '' .$searchkey. '')->orderBy('created_at', 'des')->paginate(10);
             return view('volunteers/search', ['volunteers' => $volunteers]);
         }
-        public function Oppfilter(){
+        public function OppMatches(){
             $searchkey = \Request::get('title');
             $opportunities =  Opportunity::where('center', 'like', '' .$searchkey. '')->orderBy('id')->paginate(10);
             return view('volunteers/matches', ['opportunities' => $opportunities]);
         }
-        public function Oppfilter2(){
+        public function Oppfilter(){
             $searchkey = \Request::get('title');
             $opportunities =  Opportunity::where('center', 'like', '' .$searchkey. '')->orderBy('id')->paginate(10);
            // return view('opportunities/search', ['opportunities' => $opportunities]);

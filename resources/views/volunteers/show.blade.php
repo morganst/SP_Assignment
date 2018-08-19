@@ -9,16 +9,16 @@
             
 
             @if($vol->location == 'Main Campus')
-            <a href="/Opp2filter?title=Main Campus"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
+                <a href="/OppMatches?title=Main Campus"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
             @endif
             @if($vol->location == 'Animal Shelter')
-            <a href="/Opp2filter?title=Animal Shelter"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
+                <a href="/OppMatches?title=Animal Shelter"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
             @endif
             @if($vol->location == 'Homeless Shelter')
-            <a href="/Opp2filter?title=Homeless Shelter"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
+                <a href="/OppMatches?title=Homeless Shelter"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
             @endif
             @if($vol->location == 'VA Office')
-            <a href="/Opp2filter?title=VA Office"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
+                <a href="/OppMatches?title=VA Office"class="btn btn-secondary" style="color: #F2F2F2" role="button">Matches</a></h2>
             @endif
              
             <a href="/volunteers/{{$vol->id}}/edit" class="btn btn-secondary" style="color: #F2F2F2" role="button">Edit</a>
