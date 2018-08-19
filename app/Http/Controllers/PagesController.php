@@ -25,12 +25,10 @@ class PagesController extends Controller
     }
     public function matches($id)
     {
+        
         $vol = Volunteer::find($id);
 
-        if(auth()->user()->id !== $vol->user_id) {
-            return redirect('volunteers')->with('error', 'Unauthorized page');
-        }
-
+        
         return view('pages.matches')->with('vol', $vol);
     }
 

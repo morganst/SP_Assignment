@@ -118,6 +118,17 @@ class VolunteersController extends Controller
 
         return view('volunteers.edit')->with('vol', $vol);
     }
+    public function matches($id)
+    {
+         $vol = Volunteer::find($id);
+
+         if(auth()->user()->id !== $vol->user_id) {
+             return redirect('volunteers')->with('error', 'Unauthorized page');
+         }
+
+        return view('volunteers.matches')->with('vol', $vol);
+      //  return view('volunteers.matches');
+    }
 
     /**
      * Update the specified resource in storage.
@@ -192,4 +203,5 @@ class VolunteersController extends Controller
 
         return redirect('/volunteers')->with('success', 'Volunteer Deleted!');
     }
+   
 }

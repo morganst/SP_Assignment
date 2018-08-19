@@ -13,7 +13,13 @@ class FilterController extends Controller
         public function Oppfilter(){
             $searchkey = \Request::get('title');
             $opportunities =  Opportunity::where('center', 'like', '' .$searchkey. '')->orderBy('id')->paginate(10);
-            return view('opportunities/search', ['opportunities' => $opportunities]);
+            return view('volunteers/matches', ['opportunities' => $opportunities]);
+        }
+        public function Oppfilter2(){
+            $searchkey = \Request::get('title');
+            $opportunities =  Opportunity::where('center', 'like', '' .$searchkey. '')->orderBy('id')->paginate(10);
+           // return view('opportunities/search', ['opportunities' => $opportunities]);
+           return view('opportunities/search', ['opportunities' => $opportunities]);
         }
         public function multiFilter(){
             $searchkey = \Request::get('title');
