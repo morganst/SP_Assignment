@@ -44,16 +44,38 @@
     </form>
     <br>
     <li class="dropdown">
-        <a href="javascript:void(0)" class="btn btn-md btn-success">Opportunity Filter <span class="fas fa-caret-down"/></a>
-        <div class="dropdown-content">
-            <a href="/filterAlpha">By Center</a>
-            <a href="/Oppfilter?title=Main Campus">Main Campus</a>
-            <a href="/Oppfilter?title=Animal Shelter">Animal Shelter</a>
-            <a href="/Oppfilter?title=Homeless Shelter"> Homeless Shelter</a>
-            <a href="/Oppfilter?title=VA Office">VA Office</a>
-            <a href="/filterTime">Most Recent</a>
-            <a href="/opportunities">All</a>
-        </div>
+        
+   
+        <div class="container">
+          <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Opportunity Filter</button>
+              <ul class="dropdown-menu">
+                
+                <li><a tabindex="-1" href="/filterTime">Most Recent</a></li>
+                <li class="dropdown-submenu">
+                  <a class="test dropdown-toggle"  tabindex="-1" href="#">By Center <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="/Oppfilter?title=Main Campus">Main Campus</a></li>
+                    <li><a tabindex="-1" href="/Oppfilter?title=VA Office">VA Office</a></li>
+                    <li><a tabindex="-1" href="/Oppfilter?title=Homeless Shelter">Homeless Shelter</a></li>
+                    <li><a tabindex="-1" href="/Oppfilter?title=Animal Shelter">Animal Shelter</a></li>
+                    
+                  
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+          <script>
+          $(document).ready(function(){
+            $('.dropdown-submenu a.test').on("click", function(e){
+              $(this).next('ul').toggle();
+              e.stopPropagation();
+              e.preventDefault();
+            });
+          });
+          </script>
     </li>
     <div class="text-right"><a href="/opportunities/create" class="btn btn-md btn-primary">Add New</a></div>
     <hr>

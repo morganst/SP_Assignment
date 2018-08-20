@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -19,32 +23,29 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        </style>
 </head>
+
 <body>
+
     @include('inc.navbar')
-    @include('inc.messages')
-    <div class="container content">
+    <div class="container">
+        @include('inc.messages')
         @yield('content')
     </div>
-    <div class="footer">
-        @include('inc.footer')
-    </div>
+    
 </body>
-
-    <style>
-
-        html { height: 100%; }
-        body {
-            min-height:100%; 
-            position:relative; 
-            padding-bottom: 180px;
-        }
-        .footer { 
-            position: absolute; 
-            left: 0 ; right: 0; bottom: 0; 
-            height: 180px;
-        }
-
-    </style>
+    @include('inc.footer')
 </html>
