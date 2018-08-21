@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Volunteer;
 use App\Opportunity;
+use Carbon\Carbon;
 class FilterController extends Controller
 {
     public function filter(){
@@ -35,7 +36,10 @@ class FilterController extends Controller
 
         public function filterTime(){
             $searchkey = \Request::get('title');
-            $opportunities =  Opportunity::where('created_at', 'like', '%' .$searchkey. '%')->orderBy('created_at', 'des')->paginate(10);
+            $opportunities =  Opportunity::where('created_at', 'like', '%' .$searchkey. '%')
+                                            ->orderBy('created_at', 'des')
+                                            ->whereDate('created_at', '>', Carbon::now()->subDays(60))
+                                            ->paginate(10);
             return view('opportunities/search', ['opportunities' => $opportunities]);
         }
 }

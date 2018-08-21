@@ -39,7 +39,7 @@
                 <div class="col-2 col-lg-2">{{$volunteer->userName}}</div>
                 <div class="col-2 col-lg-2">{{$volunteer->user['name']}}</div>
                 <div class="col-2 col-lg-2">{{$volunteer->status}}</div>
-                <div class"col-3 col-lg-3">
+                <div class="col-3 col-lg-3">
                     <div class="btn-group">
                         <a class="btn btn-secondary" href="/volunteers/{{$volunteer->id}}" role="button">View</a>
                         
